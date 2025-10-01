@@ -1,0 +1,38 @@
+<!-- src/main/resources/templates/error.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #c9302c;
+        }
+        .info {
+            margin-top: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<h1>¡Ups! Ha ocurrido un error</h1>
+<div class="info">
+    <p><strong>Código:</strong> <span th:text="${status}"></span></p>
+    <p><strong>Error:</strong> <span th:text="${error}"></span></p>
+    <p><strong>Mensaje:</strong> <span th:text="${message}"></span></p>
+    <p><strong>Ruta:</strong> <span th:text="${path}"></span></p>
+</div>
+<p style="margin-top:20px;"><a th:href="@{/}">Volver al inicio</a></p>
+</body>
+</html>
